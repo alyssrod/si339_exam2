@@ -35,7 +35,7 @@ window.addEventListener('dblclick', () => {
 
 const element = document.getElementById('first');
 const toggleColor = (isEntering) => {
-  element.style.color = isEntering ? 'black' : 'blue';
+  element.style.color = isEntering ? 'white' : 'blue';
   element.style.borderColor = isEntering ? 'white' : 'red';
 };
 element.addEventListener('mouseover', function(){
