@@ -19,12 +19,14 @@ window.addEventListener("load", (event) => {
 
 
 // Problem 2
-
-
+window.addEventListener("click", () => {
+  let h1 = document.querySelector('h1');
+  h1.remove();
+});
 
 
 // Problem 3
-
+//document.addEventListener('dblclick', () => {
 
 
 // Problem 4
