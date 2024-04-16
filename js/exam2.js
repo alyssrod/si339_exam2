@@ -26,8 +26,10 @@ window.addEventListener("click", () => {
 
 
 // Problem 3
-//document.addEventListener('dblclick', () => {
-
+window.addEventListener('dblclick', () => {
+  let h5 = document.querySelector('h5');
+  h5.remove(); 
+});
 
 // Problem 4
 // Part 1
