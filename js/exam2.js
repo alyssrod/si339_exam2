@@ -51,6 +51,17 @@ element.addEventListener('mouseout', function(){
 
 
 // Problem 5
+const element = document.getElementById('first');
+const toggleColor = (isEntering) => {
+  element.style.color = isEntering ? 'black' : 'blue';
+  element.style.borderColor = isEntering ? 'white' : 'red';
+};
+element.addEventListener('focus', function(){
+    toggleColor(true);
+});
+element.addEventListener('focus', function(){
+  toggleColor(false);
+});
 
 
 
