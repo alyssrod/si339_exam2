@@ -43,18 +43,10 @@ document.getElementById('first').hover = function() {
 
 
 // Problem 5
-const element = document.getElementById('first');
-const toggleColor = (isEntering) => {
-  element.style.color = isEntering ? 'black' : 'blue';
-  element.style.borderColor = isEntering ? 'white' : 'red';
-};
-element.addEventListener('focus', function(){
-    toggleColor(true);
+document.getElementById('first').focus = function() {
+  this.style.color = 'blue';
+  this.style.borderColor = 'red';
 });
-element.addEventListener('focus', function(){
-  toggleColor(false);
-});
-
 
 
 // Problem 6
