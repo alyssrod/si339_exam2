@@ -27,8 +27,7 @@ window.addEventListener("click", () => {
 
 // Problem 3
 window.addEventListener('dblclick', () => {
-  let h5 = document.querySelector('h5');
-  h5.remove(); 
+  imageElement.parentNode.removeChild(imageElement); 
 });
 
 // Problem 4
