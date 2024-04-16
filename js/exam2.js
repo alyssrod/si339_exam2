@@ -34,6 +34,8 @@ window.addEventListener('dblclick', () => {
 // Part 1
 document.getElementById('first').onmouseover = function() {
   this.style.color = 'blue';
+  this.style.borderColor = "red";
+
 };
 
 // Problem 4
