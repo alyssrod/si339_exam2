@@ -66,8 +66,16 @@ element.addEventListener('focus', function(){
 
 
 // Problem 6
-
-
+const element = document.getElementById('second');
+const toggleColor = (isEntering) => {
+  element.style.fontFamily = isEntering ? 'Times' : 'Cursive';
+};
+element.addEventListener('focus', function(){
+    toggleColor(true);
+});
+element.addEventListener('focus', function(){
+  toggleColor(false);
+});
 
 // Problem 7
 
