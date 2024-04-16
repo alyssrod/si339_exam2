@@ -32,7 +32,9 @@ window.addEventListener('dblclick', () => {
 
 // Problem 4
 // Part 1
-
+document.getElementById('first').onmouseover = function() {
+  this.style.color = 'blue';
+};
 
 // Problem 4
 // Part 2
