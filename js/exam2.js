@@ -13,7 +13,9 @@ document.querySelector("ELEMENT").addEventListener("EVENT",function(){
 
 
 // Problem 1
-
+window.addEventListener("load", (event) => {
+  console.log("Alyssa");
+});
 
 
 // Problem 2
