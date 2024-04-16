@@ -88,3 +88,11 @@ element.addEventListener('focus', function(){
 
 
 // Problem 9
+for (const img of document.querySelectorAll('img')) {
+  img.addEventListener('click', imageToText);
+}
+function imageToText() {
+    altText.textContent = this.alt;
+    console.log(this.alt);
+
+}
