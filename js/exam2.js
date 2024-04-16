@@ -50,33 +50,70 @@ document.getElementById('first').focus = function() {
 
 
 // Problem 6
-const element = document.getElementById('second');
-const toggleColor = (isEntering) => {
-  element.style.fontFamily = isEntering ? 'Times' : 'Cursive';
-};
-element.addEventListener('focus', function(){
-    toggleColor(true);
-});
-element.addEventListener('focus', function(){
-  toggleColor(false);
+document.addEventListener('DOMContentLoaded', function() {
+    const secondCaption = document.querySelectorAll('figcaption')[1];
+
+    function changeFontOnFocus() {
+        secondCaption.style.fontFamily = 'Cursive';
+    }
+
+    function restoreFontOnBlur() {
+        secondCaption.style.fontFamily = 'Times';
+    }
+
+    secondCaption.addEventListener('focus', changeFontOnFocus);
+    secondCaption.addEventListener('blur', restoreFontOnBlur);
 });
 
+
 // Problem 7
+document.addEventListener('DOMContentLoaded', function() {
+    const styleParentButton = document.getElementById('styleParentButton');
+
+    function styleParent() {
+        const figures = document.querySelectorAll('figure');
+        
+        figures.forEach(figure => {
+            const parent = figure.parentElement;
+
+            parent.classList.toggle('one-third');
+
+            if (parent.style.backgroundImage.includes('Purple-Haze.jpg')) {
+                parent.style.backgroundImage = '';
+            } else {
+                parent.style.backgroundImage = "url('Purple-Haze.jpg')";
+            }
+        });
+    }
+    styleParentButton.addEventListener('click', styleParent);
+});
 
 
 
 
 
 // Problem 8
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('styleButton');
+    const lastImage = document.getElementById('last-image');
+
+    function togglePizazz() {
+        lastImage.classList.toggle('Pizazz');
+    }
+
+    button.addEventListener('click', togglePizazz);
+});
 
 
 
 // Problem 9
-for (const img of document.querySelectorAll('img')) {
-  img.addEventListener('click', imageToText);
-}
-function imageToText() {
-    altText.textContent = this.alt;
-    console.log(this.alt);
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
 
-}
+    function logAltText(event) {
+        console.log(event.target.alt || "No ALT");
+    }
+    images.forEach(image => {
+        image.addEventListener('click', logAltText);
+    });
+});
