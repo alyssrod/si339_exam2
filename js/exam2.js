@@ -32,11 +32,17 @@ window.addEventListener('dblclick', () => {
 
 // Problem 4
 // Part 1
-document.getElementById('first').onmouseover = function() {
-  this.style.color = 'blue';
-  this.style.borderColor = "red";
 
+const element = document.getElementById('first');
+const toggleColor = (isEntering) => {
+  element.style.background = isEntering ? 'black' : 'blue';
 };
+element.addEventListener('mouseover', function(){
+    toggleColor(true);
+});
+element.addEventListener('mouseout', function(){
+  toggleColor(false);
+});
 
 // Problem 4
 // Part 2
